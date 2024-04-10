@@ -1,0 +1,51 @@
+<launch>
+  <!-- <node pkg="mrsl_quadrotor_utils"
+    name="msg_to_tf"
+    type="msg_to_tf"
+    output="screen">
+      <param name="child_frame_id" value= "fla/velodyne"/>
+      <param name="sub_topic_name" value= "/juliett/ground_truth/odom"/>
+  </node> -->
+  <node pkg="mrsl_quadrotor_utils"
+    name="juliett_msg_to_tf"
+    type="msg_to_tf"
+    output="screen">
+      <param name="uav_name" value= "juliett"/>
+  </node>
+  <node pkg="mrsl_quadrotor_utils"
+    name="adam_msg_to_tf"
+    type="msg_to_tf"
+    output="screen">
+      <param name="uav_name" value= "adam"/>
+  </node>
+  <node pkg="mrsl_quadrotor_utils"
+    name="eva_msg_to_tf"
+    type="msg_to_tf"
+    output="screen">
+      <param name="uav_name" value= "eva"/>
+  </node>
+
+  <node pkg="mrsl_quadrotor_simulator"
+    name="juliett_ctrller_wrapper"
+    type="transform_to_my_controller2"
+    output="screen">
+    <param name = "uav_id" value = "1"/>
+    <param name = "uav_name" value = "juliett"/>
+  </node>
+
+  <node pkg="mrsl_quadrotor_simulator"
+    name="adam_ctrller_wrapper"
+    type="transform_to_my_controller2"
+    output="screen">
+    <param name = "uav_id" value = "2"/>
+    <param name = "uav_name" value = "adam"/>
+  </node>
+
+  <node pkg="mrsl_quadrotor_simulator"
+    name="eva_ctrller_wrapper"
+    type="transform_to_my_controller2"
+    output="screen">
+    <param name = "uav_id" value = "3"/>
+    <param name = "uav_name" value = "eva"/>
+  </node>
+</launch>

@@ -1,0 +1,5210 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='tunnel_bend_left'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-0.009848 0.017261 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>4683 408000000</sim_time>
+      <real_time>1468 608506142</real_time>
+      <wall_time>1676818678 868093388</wall_time>
+      <iterations>1296391</iterations>
+      <model name='5mWall'>
+        <pose frame=''>25.971 -7.56033 4 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_0'>
+          <pose frame=''>25.971 -7.56033 4 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='PaperTestTunnelHouse'>
+        <pose frame=''>31.9195 -6.31952 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_10'>
+          <pose frame=''>25.9945 -12.1945 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_6'>
+          <pose frame=''>25.9945 -1.69452 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_7'>
+          <pose frame=''>31.9195 1.60548 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_8'>
+          <pose frame=''>37.8445 -6.31952 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_9'>
+          <pose frame=''>31.9195 -14.2445 0 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='PaperTestTunnelHouse_0'>
+        <pose frame=''>31.9195 -6.319 2.5 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_10'>
+          <pose frame=''>25.9945 -12.194 2.5 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_6'>
+          <pose frame=''>25.9945 -1.694 2.5 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_7'>
+          <pose frame=''>31.9195 1.606 2.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_8'>
+          <pose frame=''>37.8445 -6.319 2.5 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_9'>
+          <pose frame=''>31.9195 -14.244 2.5 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='PaperTestTunnelHouse_1'>
+        <pose frame=''>31.9195 -6.319 4 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_10'>
+          <pose frame=''>25.9945 -12.194 4 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_6'>
+          <pose frame=''>25.9945 -1.694 4 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_7'>
+          <pose frame=''>31.9195 1.606 4 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_8'>
+          <pose frame=''>37.8445 -6.319 4 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_9'>
+          <pose frame=''>31.9195 -14.244 4 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a'>
+        <pose frame=''>-34.3348 120.89 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-34.3348 120.89 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a_0'>
+        <pose frame=''>-91.7681 -65.0249 0 0 -0 3.1103</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-91.7681 -65.0249 0 0 -0 3.1103</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a_1'>
+        <pose frame=''>-113.632 21.3462 0 0 0 -3.11953</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-113.632 21.3462 0 0 0 -3.11953</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a_2'>
+        <pose frame=''>-115.399 70.9863 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-115.399 70.9863 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a_3'>
+        <pose frame=''>39.9319 119.377 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>39.9319 119.377 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a_6'>
+        <pose frame=''>40.1624 134.139 0 0 0 -1.55295</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>40.1624 134.139 0 0 0 -1.55295</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cave_cap_type_a_7'>
+        <pose frame=''>64.6604 95.7656 -0.129229 0 0 -1.52943</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>64.6604 95.7656 -0.129229 0 0 -1.52943</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cavetunnel'>
+        <pose frame=''>-76.9517 -17.2902 0 0 -0 3.13218</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-76.9517 -17.2902 0 0 -0 3.13218</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cavetunnel_1'>
+        <pose frame=''>-114.503 46.1968 0 0 0 -3.10008</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-114.503 46.1968 -0 0 0 -3.10008</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cavetunnel_2'>
+        <pose frame=''>-84.498 79.2365 0 0 -0 1.57072</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-84.498 79.2365 0 0 -0 1.57072</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cavetunnel_4'>
+        <pose frame=''>39.6698 95.5057 0 0 0 -1.55909</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>39.6698 95.5057 0 0 0 -1.55909</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_left'>
+        <pose frame=''>-0.009848 0.017261 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.009848 0.017261 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_left_0'>
+        <pose frame=''>0.456956 -39.1209 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.456956 -39.1209 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_left_2'>
+        <pose frame=''>-47.6994 -0.676658 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-47.6994 -0.676658 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_left_5'>
+        <pose frame=''>-37.6985 94.7199 0 0 -0 1.58396</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-37.6985 94.7199 0 0 -0 1.58396</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_left_6'>
+        <pose frame=''>15.8409 119.323 0 0 0 -1.57163</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>15.8409 119.323 0 0 0 -1.57163</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_right'>
+        <pose frame=''>-92.2231 -65.3158 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-92.2231 -65.3158 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_bend_right_0'>
+        <pose frame=''>-132.02 93.7754 0 0 0 -1.56856</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-132.02 93.7754 0 0 0 -1.56856</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_left'>
+        <pose frame=''>-14.4685 -48.7433 0 0 0 -1.55963</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-14.4685 -48.7433 0 0 0 -1.55963</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_left_0'>
+        <pose frame=''>-7.9875 62.4807 0 0 0 -1.58406</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-7.9875 62.4807 0 0 0 -1.58406</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_left_1'>
+        <pose frame=''>-47.6641 31.2015 0 0 0 -1.59037</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-47.6641 31.2015 0 0 0 -1.59037</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_right'>
+        <pose frame=''>-69.6521 31.3222 0 0 -0 1.55759</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-69.6521 31.3222 0 0 -0 1.55759</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_right_0'>
+        <pose frame=''>-33.0965 -49.0227 0 0 -0 1.53316</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-33.0965 -49.0227 0 0 -0 1.53316</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_right_1'>
+        <pose frame=''>6.97813 104.361 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.97813 104.361 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_corner_right_2'>
+        <pose frame=''>-32.575 47.4972 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-32.575 47.4972 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t'>
+        <pose frame=''>-0.054975 -0.025372 0 0 0 -3.13083</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.054975 -0.025372 0 0 -0 -3.13083</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_0'>
+        <pose frame=''>-14.3806 -15.1405 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-14.3806 -15.1405 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_1'>
+        <pose frame=''>-40.2743 -7.87617 0 0 -0 1.56698</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-40.2743 -7.87617 0 0 -0 1.56698</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_2'>
+        <pose frame=''>-55.2629 -17.5714 0 0 0 -1.572</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-55.2629 -17.5714 0 0 0 -1.572</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_3'>
+        <pose frame=''>-62.652 23.8507 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-62.652 23.8507 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_4'>
+        <pose frame=''>-92.1281 46.9798 0 0 0 -1.55057</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-92.1281 46.9798 0 0 0 -1.55057</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_5'>
+        <pose frame=''>-34.4687 102.158 0 0 -0 3.11742</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-34.4687 102.158 0 0 -0 3.11742</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_intersection_t_6'>
+        <pose frame=''>-15.3032 55.0621 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-15.3032 55.0621 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight'>
+        <pose frame=''>-12.9203 94.6384 0 0 0 -1.58043</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-12.9203 94.6384 0 0 0 -1.58043</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_0'>
+        <pose frame=''>-8.03451 94.5646 0 0 0 -1.56841</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-8.03451 94.5646 0 0 0 -1.56841</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_1'>
+        <pose frame=''>-15.2634 50.2111 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-15.2634 50.2111 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_2'>
+        <pose frame=''>-15.2396 45.616 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-15.2396 45.616 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_3'>
+        <pose frame=''>-15.3031 42.9952 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-15.3031 42.9952 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_4'>
+        <pose frame=''>-32.5754 42.5941 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-32.5754 42.5941 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_5'>
+        <pose frame=''>-32.5888 38.0711 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-32.5888 38.0711 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_6'>
+        <pose frame=''>-52.2956 31.3162 0 0 0 -1.59187</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-52.2956 31.3162 0 0 0 -1.59187</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_straight_7'>
+        <pose frame=''>-52.1111 31.3565 0 0 -0 1.5491</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-52.1111 31.3565 -0 0 -0 1.5491</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_1'>
+        <pose frame=''>6.99992 94.6816 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.99992 94.6816 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5'>
+        <pose frame=''>-23.7178 -48.9548 0 0 0 -1.5458</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-23.7178 -48.9548 0 0 0 -1.5458</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_0'>
+        <pose frame=''>-47.6609 -30.5956 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-47.6609 -30.5956 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_1'>
+        <pose frame=''>-31.7739 -7.68753 0 0 0 -1.55702</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-31.7739 -7.68753 0 0 0 -1.55702</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_2'>
+        <pose frame=''>-21.9029 94.6212 0 0 0 -1.57095</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-21.9029 94.6212 0 0 0 -1.57095</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_3'>
+        <pose frame=''>-34.383 111.568 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-34.383 111.568 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_4'>
+        <pose frame=''>6.98487 80.8023 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.98487 80.8023 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_5'>
+        <pose frame=''>-15.0619 34.2126 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-15.0619 34.2126 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='tunnel_tile_5_6'>
+        <pose frame=''>15.9688 -7.44233 -0 0 -0 1.56056</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>15.9688 -7.44233 -0 0 -0 1.56056</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='tunnel_intersection_t'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>0.157567 -10.5313 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_bend_left_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-2.09147 -47.0016 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_corner_left'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Left/meshes/Tunnel_Corner_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Left/meshes/Tunnel_Corner_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-8.30368 -54.8858 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-25.0537 -56.0254 0 0 -0 0</pose>
+    </model>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>650.083 -112.446 225.614 0 0.492452 -1.37512</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='tunnel_corner_right_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-40.0731 -56.5657 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-14.3806 -15.1405 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-47.6173 -28.779 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-32.8211 -9.86624 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-48.9648 -15.2824 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-47.6206 -23.8745 0 0 -0 0</pose>
+    </model>
+    <model name='cavetunnel'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Walls_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='RockPile_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>RockPile</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/RockPile_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='StriatedRock_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>StriatedRock</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/StriatedRock_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Gravel_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Gravel</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Gravel_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Ground_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='CaveWall_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>CaveWall</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_chainlink'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>1.678670 0 4.477200 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>14 10 10</size>
+          </box>
+        </geometry>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+      </plugin>
+      <pose frame=''>-64.004 -18.6505 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_bend_right'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Right/meshes/Tunnel_Bend_S_Right.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Right/meshes/Tunnel_Bend_S_Right.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-96.199 -74.6424 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a_0'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-91.7658 -67.0493 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_bend_left_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-47.6994 -0.676658 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_3'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-62.652 23.8507 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_corner_left_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Left/meshes/Tunnel_Corner_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Left/meshes/Tunnel_Corner_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-0.245573 62.2169 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_corner_right'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-73.2032 30.8808 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_4'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-84.3969 41.4153 0 0 -0 0</pose>
+    </model>
+    <model name='cavetunnel_1'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Walls_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='RockPile_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>RockPile</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/RockPile_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='StriatedRock_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>StriatedRock</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/StriatedRock_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Gravel_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Gravel</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Gravel_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Ground_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='CaveWall_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>CaveWall</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_chainlink'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>1.678670 0 4.477200 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>14 10 10</size>
+          </box>
+        </geometry>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+      </plugin>
+      <pose frame=''>-90.469 47.3624 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a_1'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-113.592 19.5135 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a_2'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-115.399 70.9863 0 0 -0 0</pose>
+    </model>
+    <model name='cavetunnel_2'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Walls_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='RockPile_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>RockPile</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/RockPile_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='StriatedRock_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>StriatedRock</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/StriatedRock_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Gravel_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Gravel</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Gravel_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Ground_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='CaveWall_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>CaveWall</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_chainlink'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>1.678670 0 4.477200 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>14 10 10</size>
+          </box>
+        </geometry>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+      </plugin>
+      <pose frame=''>-70.7543 76.266 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_bend_left_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-41.7496 67.9378 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-28.6338 94.7907 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_bend_right_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Right/meshes/Tunnel_Bend_S_Right.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Right/meshes/Tunnel_Bend_S_Right.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-116.205 77.0678 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-34.8321 87.1306 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_3'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-34.383 111.568 0 0 -0 0</pose>
+    </model>
+    <model name='cavetunnel_4'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Walls_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='RockPile_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>RockPile</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/RockPile_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='StriatedRock_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>StriatedRock</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/StriatedRock_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Gravel_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Gravel</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Gravel_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Ground_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='CaveWall_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>CaveWall</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts/</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures/</uri>
+              <name>UrbanTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_chainlink'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/meshes/cavetunnel.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/scripts</uri>
+              <uri>/home/huiyulin/building_editor_models/Cave Tunnel Transition/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>1.678670 0 4.477200 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>14 10 10</size>
+          </box>
+        </geometry>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+      </plugin>
+      <pose frame=''>44.5872 95.4567 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 1/meshes/tunnel_tile_1.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>20 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 1/meshes/tunnel_tile_1.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>model://tunnel_tile_1/materials/scripts</uri>
+              <uri>model://tunnel_tile_1/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 1/meshes/tunnel_tile_1.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>model://tunnel_tile_1/materials/scripts</uri>
+              <uri>model://tunnel_tile_1/materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 1/meshes/tunnel_tile_1.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>model://tunnel_tile_1/materials/scripts</uri>
+              <uri>model://tunnel_tile_1/materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 1/meshes/tunnel_tile_1.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>model://tunnel_tile_1/materials/scripts</uri>
+              <uri>model://tunnel_tile_1/materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 1/meshes/tunnel_tile_1.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>model://tunnel_tile_1/materials/scripts</uri>
+              <uri>model://tunnel_tile_1/materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>6.99992 82.0477 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_4'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>6.98487 80.8023 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_corner_right_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>6.97813 104.361 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_bend_left_6'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Bend Left/meshes/Tunnel_Bend_S_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>18.0584 117.835 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a_3'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>40.7312 133.376 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a_6'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>41.305 133.466 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a_7'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>64.5946 96.3079 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-8.63233 92.7525 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-5.95997 92.74 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_intersection_t_6'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Intersection T/meshes/Tunnel_Intersection_T.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='ignition::gazebo::systems::PerformerDetector' filename='libignition-gazebo-performer-detector-system.so'>
+        <topic>/subt_performer_detector</topic>
+        <pose>0 7.5 2 0 0 0</pose>
+        <header_data>
+          <key>type</key>
+          <value>decision</value>
+        </header_data>
+        <geometry>
+          <box>
+            <size>6 6 4</size>
+          </box>
+        </geometry>
+      </plugin>
+      <pose frame=''>-12.8181 54.9479 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-15.0499 34.8849 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-15.2634 50.2111 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-15.2396 45.616 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_3'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-15.3031 42.9952 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_corner_right_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Right/meshes/Tunnel_Corner_Right.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-32.575 47.4972 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_corner_left_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Left/meshes/Tunnel_Corner_Left.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Corner Left/meshes/Tunnel_Corner_Left.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-36.096 28.376 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_4'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-32.5754 42.5941 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-32.5888 38.0711 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_6'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-50.9775 28.5869 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_straight_7'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Straight/meshes/Tunnel_Straight.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-53.7141 29.1082 0 0 -0 0</pose>
+    </model>
+    <model name='cave_cap_type_a'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cave_cap_type_a_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Cave Cap Type A/meshes/cap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts/</uri>
+              <uri>materials/textures/</uri>
+              <name>CaveTile/CaveWall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-34.3348 120.89 0 0 -0 0</pose>
+    </model>
+    <model name='tunnel_tile_5_6'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision_ground'>
+          <geometry>
+            <box>
+              <size>5 20 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_chainlink'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Chainlink</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_ground'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Ground</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_wood'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Wood</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_walls'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Walls</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='visual_lights'>
+          <geometry>
+            <mesh>
+              <uri>/home/huiyulin/building_editor_models/Tunnel Tile 5/meshes/tunnel_tile_5.dae</uri>
+              <submesh>
+                <name>Lights</name>
+                <center>0</center>
+              </submesh>
+              <scale>1.005 1.005 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>1 1 1 1</specular>
+            <script>
+              <uri>materials/scripts</uri>
+              <uri>materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.0876 -6.56267 0 0 -0 0</pose>
+    </model>
+    <model name='PaperTestTunnelHouse'>
+      <pose frame=''>-2.27186 -6.31952 0 0 -0 0</pose>
+      <link name='Wall_10'>
+        <collision name='Wall_10_Collision'>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_10_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-5.925 -5.875 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_6'>
+        <collision name='Wall_6_Collision'>
+          <geometry>
+            <box>
+              <size>6.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_6_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-5.925 4.625 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_7'>
+        <collision name='Wall_7_Collision'>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_7_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-0 7.925 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_8'>
+        <collision name='Wall_8_Collision'>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_8_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>5.925 0 0 0 -0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_9'>
+        <collision name='Wall_9_Collision'>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_9_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-0 -7.925 0 0 -0 3.14159</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='PaperTestTunnelHouse_0'>
+      <pose frame=''>26.7691 6.83292 0 0 -0 0</pose>
+      <link name='Wall_10'>
+        <collision name='Wall_10_Collision'>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_10_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-5.925 -5.875 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_6'>
+        <collision name='Wall_6_Collision'>
+          <geometry>
+            <box>
+              <size>6.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_6_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-5.925 4.625 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_7'>
+        <collision name='Wall_7_Collision'>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_7_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-0 7.925 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_8'>
+        <collision name='Wall_8_Collision'>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_8_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>5.925 0 0 0 -0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_9'>
+        <collision name='Wall_9_Collision'>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_9_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-0 -7.925 0 0 -0 3.14159</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='5mWall'>
+      <pose frame=''>25.971 -7.56033 0 0 -0 0</pose>
+      <link name='Wall_0'>
+        <collision name='Wall_0_Collision'>
+          <geometry>
+            <box>
+              <size>5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_0_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>0 -0 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='PaperTestTunnelHouse_1'>
+      <pose frame=''>35.6079 6.33772 0 0 -0 0</pose>
+      <link name='Wall_10'>
+        <collision name='Wall_10_Collision'>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_10_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-5.925 -5.875 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_6'>
+        <collision name='Wall_6_Collision'>
+          <geometry>
+            <box>
+              <size>6.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_6_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>6.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-5.925 4.625 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_7'>
+        <collision name='Wall_7_Collision'>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_7_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-0 7.925 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_8'>
+        <collision name='Wall_8_Collision'>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_8_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>5.925 0 0 0 -0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_9'>
+        <collision name='Wall_9_Collision'>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_9_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>-0 -7.925 0 0 -0 3.14159</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+  </world>
+</sdf>

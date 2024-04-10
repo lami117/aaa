@@ -1,0 +1,49 @@
+<launch>
+  <arg name="robot" default="juliett"/>
+  <arg name="robot_type" default="pelican_laser_rgbd"/>
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.1"/>
+  <!-- <arg name="Y" default="-0.785"/> -->
+  <arg name="Y" default="0.0"/>
+
+  <group ns="$(arg robot)">
+    <arg name="model" default="$(find mrsl_quadrotor_description)/urdf/$(arg robot_type)/$(arg robot_type).gazebo.xacro"/>
+    <param name="robot_description" command="xacro '$(arg model)' "/>
+    <node name="spawn_robot"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-param robot_description
+      -urdf
+      -x $(arg x)
+      -y $(arg y)
+      -z $(arg z)
+      -Y $(arg Y)
+      -model $(arg robot)"
+      output="screen"/>
+  </group>
+
+<group ns="adam">
+    <arg name="model" default="$(find mrsl_quadrotor_description)/urdf/$(arg robot_type)/$(arg robot_type).gazebo.xacro"/>
+    <param name="robot_description" command="xacro '$(arg model)' "/>
+    <node name="spawn_robot"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-param robot_description
+      -urdf
+      -x 10
+      -y 0
+      -z 0
+      -Y 0
+      -model adam"
+      output="screen"/>
+  </group>
+
+  <!--
+  <include file="$(find mrsl_quadrotor_launch)/launch/controller.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+-->
+</launch>

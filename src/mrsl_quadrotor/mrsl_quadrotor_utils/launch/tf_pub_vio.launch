@@ -1,0 +1,20 @@
+<launch>
+ 
+  <node pkg="mrsl_quadrotor_utils"
+    name="vio_test_msg_to_tf"
+    type="msg_to_tf"
+    output="screen">
+      <param name="uav_name" value= "vio_test"/>
+  </node>
+ 
+
+  <node pkg="mrsl_quadrotor_simulator"
+    name="vio_test_ctrller_wrapper"
+    type="transform_to_my_controller2"
+    output="screen">
+    <param name = "uav_id" value = "1"/>
+    <param name = "uav_name" value = "vio_test"/>
+  </node>
+
+
+</launch>

@@ -1,0 +1,25 @@
+<launch>
+    <arg name="num" default="1" />
+    <arg name="world" default="ExploreWorld4" />
+    <arg name="x" default="0" />
+    <arg name="y" default="0" />
+    <arg name="z" default="0" />
+    <!-- Gazebo -->
+    <include file="$(find mrsl_quadrotor_launch)/launch/gazebo.launch">
+        <arg name="world" value="$(arg world)" />
+    </include>
+    <!-- Load 2uav -->
+    <include file="$(find mrsl_quadrotor_launch)/launch/user_defined_multi_uav.launch">
+        <arg name="group_name" value="uav$(arg num)" />
+        <arg name="x" value="$(arg x)" />
+        <arg name="y" value="$(arg y)" />
+        <arg name="z" value="$(arg z)" />
+    </include>
+    <!-- TF pub -->
+    <include file="$(find mrsl_quadrotor_utils)/launch/user_defined_tf_pub.launch">
+        <arg name="tf_name" value="uav$(arg num)_msg_to_tf" />
+        <arg name="trans_name" value="uav$(arg num)_ctrller_wrapper" />
+        <arg name="uav_name" value="uav$(arg num)" />
+        <arg name="uav_id" value="$(arg num)" />
+    </include>
+</launch>

@@ -1,0 +1,68 @@
+<launch>
+  <!-- <arg name="robot" default="juliett"/> -->
+  <!-- <arg name="robot_type" default="fla_platform_velodyne"/> -->
+  <!-- <arg name="robot_type" default="fla_platform_lidar_3d"/> -->
+  <!-- <arg name="x" default="0.0"/> -->
+  <!-- <arg name="y" default="0.0"/> -->
+  <!-- <arg name="z" default="0.1"/> -->
+  <!-- <arg name="Y" default="-0.785"/> -->
+  <!-- <arg name="Y" default="0.0"/> -->
+
+  <group ns="juliett">
+    <arg name="model" default="$(find mrsl_quadrotor_description)/urdf/fla_platform_velodyne/fla_platform_velodyne.gazebo.xacro"/>
+    <param name="robot_description" command="xacro '$(arg model)' "/>
+    <node name="spawn_robot"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-param robot_description
+      -urdf
+      -x -24.0
+      -y 0.0
+      -z 0.1
+      -Y 0
+      -model juliett"
+      output="screen"/>
+  </group>
+
+  <group ns="adam">
+    <arg name="model" default="$(find mrsl_quadrotor_description)/urdf/fla_platform_velodyne/fla_platform_velodyne2.gazebo.xacro"/>
+    <param name="robot_description" command="xacro '$(arg model)' "/>
+    <node name="spawn_robot"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-param robot_description
+      -urdf
+      -x -24.0
+      -y -6.0
+      -z 0.1
+      -Y 0
+      -model adam"
+      output="screen"/>
+  </group>
+
+  <group ns="eva">
+    <arg name="model" default="$(find mrsl_quadrotor_description)/urdf/fla_platform_velodyne/fla_platform_velodyne3.gazebo.xacro"/>
+    <param name="robot_description" command="xacro '$(arg model)' "/>
+    <node name="spawn_robot"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-param robot_description
+      -urdf
+      -x -24.0
+      -y 6.0
+      -z 0.1
+      -Y 0
+      -model eva"
+      output="screen"/>
+  </group>
+
+
+  <!--
+  <include file="$(find mrsl_quadrotor_launch)/launch/controller.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+-->
+</launch>

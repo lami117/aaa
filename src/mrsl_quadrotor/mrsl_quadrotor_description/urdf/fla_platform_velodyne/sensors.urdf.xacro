@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find mrsl_quadrotor_description)/urdf/sensors/VLP-16.urdf.xacro" />
+  <xacro:VLP-16 name="velodyne" parent="base_link" topic="velodyne" robot="${robot_name}" gpu="true">
+    <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
+  </xacro:VLP-16>
+
+  
+  <!-- <xacro:include filename="$(find mrsl_quadrotor_description)/urdf/sensors/camera.urdf.xacro" />
+  <xacro:monocular_camera name="downward" parent="base_link">
+    <origin xyz="0.2 0.0 0.0" rpy="0 0 0"/>
+  </xacro:monocular_camera> -->
+
+  <xacro:include filename="$(find mrsl_quadrotor_description)/urdf/sensors/asus_camera.urdf.xacro" />
+  <xacro:asus_camera name="camera" parent="base_link">
+    <origin xyz="0.2 0.0 0.0" rpy="0 0 0"/>
+  </xacro:asus_camera>
+
+
+</robot>

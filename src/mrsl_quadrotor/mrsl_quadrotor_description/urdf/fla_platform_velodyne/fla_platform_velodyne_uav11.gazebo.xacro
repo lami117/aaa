@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="pelican" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="robot_name" value="uav11" />
+  <xacro:include filename="$(find mrsl_quadrotor_description)/urdf/fla_platform_velodyne/fla_platform_so3.urdf.xacro" />
+  <xacro:include filename="$(find mrsl_quadrotor_description)/urdf/fla_platform_velodyne/sensors.urdf.xacro"/>
+</robot>

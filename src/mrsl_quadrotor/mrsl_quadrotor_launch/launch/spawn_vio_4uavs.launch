@@ -1,0 +1,24 @@
+<launch>
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.1"/> 
+  <arg name="Y" default="0.0"/>
+  <arg name="group_name" default="vio_test"/>
+
+  <group ns="$(arg group_name)">
+    <arg name="model" default="$(find mrsl_quadrotor_description)/urdf/fla_platform_velodyne/fla_platform_velodyne.gazebo.xacro"/>
+    <param name="robot_description" command="xacro '$(arg model)' "/>
+    <node name="spawn_robot"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-param robot_description
+      -urdf
+      -x $(arg x)
+      -y $(arg y)
+      -z $(arg z)
+      -Y $(arg Y)
+      -model $(arg group_name)"
+      output="screen"/>
+  </group>
+</launch>

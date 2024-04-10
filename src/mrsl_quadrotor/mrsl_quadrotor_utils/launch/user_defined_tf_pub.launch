@@ -1,0 +1,22 @@
+<launch>
+  <arg name="tf_name" default="uav_msg_to_tf"/>
+  <arg name="trans_name" default="uav_ctrller_wrapper"/>
+  <arg name="uav_name" default="uav"/>
+  <arg name="uav_id" default="0"/>
+
+  <node pkg="mrsl_quadrotor_utils"
+    name="$(arg tf_name)"
+    type="msg_to_tf"
+    output="screen">
+      <param name="uav_name" value= "$(arg uav_name)"/>
+  </node>
+ 
+  <node pkg="mrsl_quadrotor_simulator"
+    name="$(arg trans_name)"
+    type="transform_to_my_controller2"
+    output="screen">
+    <param name = "uav_id" value = "$(arg uav_id)"/>
+    <param name = "uav_name" value = "$(arg uav_name)"/>
+  </node>
+
+</launch>
