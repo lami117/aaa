@@ -8,9 +8,7 @@ find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
 
 find_package(Eigen3 REQUIRED)
-include_directories(${EIGEN3_INCLUDE_DIRS})
-
-include_directories(include)
+include_directories(${EIGEN3_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS} include)
 
 catkin_package(CATKIN_DEPENDS roscpp gazebo_ros quadrotor_msgs mavros_msgs)
 
